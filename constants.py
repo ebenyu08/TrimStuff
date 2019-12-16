@@ -13,8 +13,8 @@ TRIM_BUTTON = "Trim"
 
 # OPTION BOXES
 RESOLUTION_OPTION_BOX = "Resolution"
-CRF_OPTION_BOX = "CRF"
 PRESET_OPTION_BOX = "Preset"
+CRF_SPIN_BOX = "CRF"
 
 # MESSAGES
 LOG_MESSAGE = "Log"
@@ -24,8 +24,10 @@ OPTIONS_FRAME = "Options"
 LOG_FRAME = LOG_MESSAGE
 
 # OPTIONS
-SCALING_OPTIONS = ["1280x720", "1920x1080"]
-CRF_OPTIONS = [18, 19, 20, 21, 22, 23, 24, 25]
+RES_720 = "1280x720"
+RES_1080 = "1920x1080"
+SCALING_OPTIONS = [RES_720, RES_1080]
+CRF_OPTIONS = range(25, -1, -1)
 PRESET_OPTIONS = [
     "ultrafast",
     "superfast",
@@ -40,6 +42,5 @@ PRESET_OPTIONS = [
 ]
 
 # STRINGS
-TIME_PLACEHOLDER = "00:00:00"
 SAVE_AS = "Save as..."
 DEFAULT_OUTPUT = "D:/Movies/Recordings/Trimmed Recordings/out.mp4"

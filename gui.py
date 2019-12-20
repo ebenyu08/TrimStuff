@@ -7,7 +7,7 @@ from threading import Thread
 from appJar import gui
 from constants import *
 
-settings_file = "config.json"
+settings_file = "D:\\Projects\\TrimStuff\\config.json"
 if "_MEIPASS2" in os.environ:
     settings_file = os.path.join(os.environ["_MEIPASS2"], settings_file)
 user_settings = json.load(open(settings_file))
@@ -138,7 +138,7 @@ def open_ffmpeg_page():
 
 with gui(APP_TITLE, showIcon=False) as app:
     with app.labelFrame(PARAMETERS_FRAME):
-        app.setIcon("resources/icons8-video-trimming-48.png")
+        app.setIcon("D:\\Projects\\TrimStuff\\icons8-video-trimming-48.png")
         app.setSize(400, 600)
         app.setResizable(False)
         app.setTitle(APP_TITLE)

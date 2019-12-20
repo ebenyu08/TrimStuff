@@ -132,12 +132,12 @@ def open_ffmpeg_page():
     webbrowser.open("https://ffmpeg.zeranoe.com/builds/")
 
 
-with gui(APP_TITLE) as app:
+with gui(APP_TITLE, showIcon=False) as app:
     with app.labelFrame(PARAMETERS_FRAME):
+        app.setIcon("resources/icons8-video-trimming-48.png")
         app.setSize(400, 600)
         app.setResizable(False)
         app.setTitle(APP_TITLE)
-        app.icon_path = "resources/icons8-color-48.png"
 
         # User Settings
         app.addMenuItem(SETTINGS_TITLE, SETTINGS_TITLE, open_options)

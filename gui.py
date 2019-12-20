@@ -1,3 +1,4 @@
+import os
 import subprocess
 import json
 import webbrowser
@@ -6,7 +7,10 @@ from threading import Thread
 from appJar import gui
 from constants import *
 
-user_settings = json.load(open("settings/config.json"))
+settings_file = "config.json"
+if "_MEIPASS2" in os.environ:
+    settings_file = os.path.join(os.environ["_MEIPASS2"], settings_file)
+user_settings = json.load(open(settings_file))
 
 file_path = DEFAULT_OUTPUT
 
@@ -124,7 +128,7 @@ def change_default_folder(button_name):
 
 
 def save_settings():
-    if json.dump(user_settings, open("settings/config.json", "w")):
+    if json.dump(user_settings, open(settings_file, "w")):
         close_options()
 
 
